@@ -43,7 +43,7 @@ class GravatarHelper {
 		$params = http_build_query($options);
 		$url = sprintf('http://www.gravatar.com/avatar/%s?%s', $hash, $params);
 
-		return sprintf('<img src="%s" al="" width="%d" height="%d" />',
+		return sprintf('<img src="%s" alt="" width="%d" height="%d" />',
 			$url, $options['size'], $options['size']);
 	}
 
