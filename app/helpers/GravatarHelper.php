@@ -20,11 +20,15 @@
 class GravatarHelper {
 
 	/**
-	 * undocumented function
+	 * Renders a gravatar
 	 *
-	 * @param string $email 
-	 * @param string $options 
-	 * @return void
+	 * @param string $email email address
+	 * @param array $options
+	 *         - size: size of the avatar in pixels (default: 80)
+	 *         - rating: gravatar rating level (default: g)
+	 *         - default: default image to show when user doesn't have a gravatar
+	 * @return string
+	 * @link http://en.gravatar.com/site/implement/images/
 	 */
 	public function image($email, $options = array()) {
 		$defaults = array(
@@ -44,10 +48,10 @@ class GravatarHelper {
 	}
 
 	/**
-	 * undocumented function
+	 * Alias of GravatarHelper::image()
 	 *
 	 * @param string $email 
-	 * @param string $options 
+	 * @param array $options 
 	 * @return string
 	 */
 	public function img($email, $options = array()) {
