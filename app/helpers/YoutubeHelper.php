@@ -27,7 +27,7 @@ class YoutubeHelper {
 	 * @return string
 	 */
 	public function embed($vid, $options = array()) {
-		$defaults = array('width' => 640, 'height' => 385, 'hd' => false, 'related' => false);
+		$defaults = array('width' => 640, 'height' => 385, 'hd' => false, 'related' => false, 'autoplay' => false);
 		$options += $defaults;
 
 		$flashParams = array();
@@ -38,6 +38,10 @@ class YoutubeHelper {
 
 		if (!$options['related']) {
 			$flashParams[] = 'rel=0';
+		}
+
+		if ($options['autoplay']) {
+			$flashParams[] = 'autoplay=1';
 		}
 
 		$playerUrl = 'http://www.youtube.com/v/' . htmlentities(implode('&', $flashParams));
