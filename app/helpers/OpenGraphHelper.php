@@ -18,7 +18,7 @@
  * @package default
  * @link http://opengraphprotocol.org/
  */
-class OpenGraphHelper {
+class OpenGraphHelper extends \rox\template\Helper {
 
 	/**
 	 * List of Open Graph properties
